@@ -26,7 +26,7 @@ let done = new Audio('./sounds/done.mp3')
 
   const handleCompleted = ()=> {
     canvasConfetti()
-    done.play
+    done.play()
     setTask("")
     counter()
 
