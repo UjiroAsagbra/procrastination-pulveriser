@@ -55,7 +55,13 @@ let done = new Audio('./sounds/done.mp3')
             handleAddTask={handleAddTask}/>
         }
 
-      
+{count === 1 ? (
+  <p className="count">You have completed is 1 task</p>
+) : count > 1 ? (
+  <p className="count">You have completed {count} tasks</p>
+) : (
+  <p className="count">Add a new task to begin</p>
+)}
     
     </>
   )
