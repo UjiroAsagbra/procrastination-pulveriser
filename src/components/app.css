@@ -1,0 +1,54 @@
+body{
+  background-color: rgb(150, 221, 246);
+  margin-left: 1rem;
+}
+
+.title{
+  margin-left: 2rem;
+  margin-top: 3rem;
+  font-family: cursive;
+}
+.new{
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  
+}
+
+.input{
+  height: 5vh;
+  padding-left: 1rem;
+}
+.btn{
+  width: 10rem;
+  font-weight: bold;
+  border: 1.5px solid;
+
+  
+}
+.complete{
+  height: 7vh;
+}
+.count{
+  font-size: large;
+  font-weight: bold;
+  margin-left: 3rem;
+  margin-top: 3rem;
+}
+
+.task{
+  font-size: large;
+  margin-left: 4rem;
+  margin-top: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+
+.taskapp{
+  margin-left: 6rem;
+  margin-top: 3rem;
+}
+
+.timer{
+  margin-left: 1rem;
+}
