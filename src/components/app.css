@@ -6,7 +6,7 @@ body{
 .title{
   margin-left: 2rem;
   margin-top: 3rem;
-  font-family: cursive;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .new{
   display: flex;

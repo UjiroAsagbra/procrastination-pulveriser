@@ -26,7 +26,7 @@ let done = new Audio('./sounds/done.mp3')
 
   const handleCompleted = ()=> {
     canvasConfetti()
-    done.play()
+    done.play
     setTask("")
     counter()
 
@@ -55,10 +55,13 @@ let done = new Audio('./sounds/done.mp3')
             handleAddTask={handleAddTask}/>
         }
 
-        
-    <p className="count">You have completed {count} tasks!!</p>
-
-    
+{count === 1 ? (
+  <p>You have completed is 1 task</p>
+) : count > 1 ? (
+  <p>You have completed {count} tasks</p>
+) : (
+  <p>Add a new task to begin</p>
+)}
     </>
   )
 
