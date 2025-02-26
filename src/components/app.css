@@ -32,13 +32,13 @@ body{
 .count{
   font-size: large;
   font-weight: bold;
-  margin-left: 3rem;
+  margin-left: 4rem;
   margin-top: 3rem;
 }
 
 .task{
   font-size: large;
-  margin-left: 4rem;
+  margin-left: -3rem;
   margin-top: 1rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
