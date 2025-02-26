@@ -3,7 +3,7 @@ import Tasks from "./tasks";
 
 const Countdown = ()=> {
 
-  const getTimeLeft = () => (isFocus ? 1 * 60 : 1 * 60)
+  const getTimeLeft = () => (isFocus ? 10 * 60 : 2 * 60)
   const [isFocus, setIsFocus] = useState(true)
   const [timeLeft, setTimeLeft] = useState(()=>getTimeLeft())
 
@@ -28,7 +28,7 @@ const Countdown = ()=> {
     if (timeLeft === 0) {
       notify()
       setIsFocus((prev) => !prev);
-      setTimeLeft(isFocus ? 1 * 60 : 1 * 60)
+      setTimeLeft(isFocus ? 10 * 60 : 2 * 60)
     }
   }, [timeLeft, isFocus]);
 
