@@ -1,17 +1,19 @@
 import { useState, useEffect } from "react"
-import Countdown from "./timer"
+import Countdown from "./refreshtimer"
 import NewTask from "./newTask"
 import Task from "./task"
 import canvasConfetti from 'https://cdn.skypack.dev/canvas-confetti';
+import {useNavigate } from "react-router-dom";
 
 const Tasks = () => {
   const [count, setCount] = useState(() => {
     const taskCount = localStorage.getItem("Count");
-    return taskCount && !isNaN(taskCount) ? parseInt(taskCount, 10) : 0; // Default to 0 if invalid
+    return taskCount && !isNaN(taskCount) ? parseInt(taskCount, 10) : 0; 
   });
+
   const [inputText, setInputText] = useState("")
   const [task, setTask] = useState()
-  
+  const navigate = useNavigate()
 
   const handletask = (e) => {
     setInputText(e.target.value)
@@ -20,7 +22,7 @@ const Tasks = () => {
   const handleAddTask = () => {
     setTask(inputText)
     setInputText("")
-
+    navigate('/1')
   }
 let done = new Audio('./sounds/done.mp3')
 
@@ -29,6 +31,7 @@ let done = new Audio('./sounds/done.mp3')
     done.play()
     setTask("")
     counter()
+    navigate('/')
 
   }
 
@@ -40,6 +43,14 @@ let done = new Audio('./sounds/done.mp3')
   useEffect(() => {
     localStorage.setItem("Count", JSON.stringify(count));
   }, [count]);
+
+  /*const deleteItems = () =>{
+    localStorage.clear();
+    setCount(0)
+    setTask("")
+    navigate('/')
+  }
+*/
 
   return(
     <>
@@ -54,15 +65,16 @@ let done = new Audio('./sounds/done.mp3')
             handletask={handletask}
             handleAddTask={handleAddTask}/>
         }
-
+<div className="counter">
 {count === 1 ? (
-  <p className="count">You have completed is 1 task</p>
+  <p className="count">You have completed 1 task</p>
 ) : count > 1 ? (
   <p className="count">You have completed {count} tasks</p>
 ) : (
   <p className="count">Add a new task to begin</p>
 )}
-    
+
+</div>
     </>
   )
 
